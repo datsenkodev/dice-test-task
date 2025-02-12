@@ -35,7 +35,7 @@ body {
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
-  transition: 1s ease;
+  transition: 1s ease-in-out;
   animation: floating 2s infinite ease-in-out;
 }
 
@@ -61,7 +61,7 @@ body {
   }
   50% {
     top: -6rem;
-    transform: rotateX(1440deg) rotateY(1440deg);
+    transform: rotateX(445deg) rotateY(445deg);
   }
   100% {
     top: 2rem;
@@ -98,7 +98,6 @@ body {
   transform-style: preserve-3d;
   background: linear-gradient(145deg, #dddbd8, #fff);
 }
-
 .face::before {
   position: absolute;
   content: "";
@@ -108,7 +107,6 @@ body {
   background: #f6f3f0;
   transform: translateZ(-1px);
 }
-
 .face::after {
   position: absolute;
   content: "";
@@ -123,27 +121,6 @@ body {
 .front {
   transform: translateZ(50px);
 }
-
-.back {
-  transform: rotateX(180deg) translateZ(50px);
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(50px);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(50px);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(50px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(50px);
-}
-
 .front::after {
   width: 30px;
   height: 30px;
@@ -151,26 +128,41 @@ body {
   margin: -15px 0 0 -15px;
 }
 
+.back {
+  transform: rotateX(180deg) translateZ(50px);
+}
 .back::after {
   margin: -35px 0 0 -30px;
   box-shadow: 40px 0, 0 25px, 40px 25px, 0 50px, 40px 50px;
 }
 
+.top {
+  transform: rotateX(90deg) translateZ(50px);
+}
 .top::after {
   margin: -30px 0 0 -30px;
   box-shadow: 40px 40px;
 }
 
+.bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
 .bottom::after {
   margin: -36px 0 0 -36px;
   box-shadow: 26px 26px, 52px 52px, 52px 0, 0 52px;
 }
 
+.right {
+  transform: rotateY(90deg) translateZ(50px);
+}
 .right::after {
   margin: -30px 0 0 -30px;
   box-shadow: 40px 0, 0 40px, 40px 40px;
 }
 
+.left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
 .left::after {
   margin: -35px 0 0 -35px;
   box-shadow: 25px 25px, 50px 50px;
@@ -189,7 +181,6 @@ body {
   border: 2px solid #33284a;
   transition: 0.4s;
 }
-
 .roll:hover {
   color: #7a40ed;
   background: #33284a;

@@ -41,8 +41,8 @@ const rollDice = (random) => {
         break;
     }
     result.textContent = random;
-    dice.style.animation = 'floating 2s infinite ease-in-out';
-  }, 4000);
+    dice.style.animation = 'floating 2s infinite';
+  }, 4050);
 };
 
 rollBtn.addEventListener('click', randomDice);
